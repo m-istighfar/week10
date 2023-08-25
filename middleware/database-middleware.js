@@ -5,7 +5,7 @@ const databaseMiddleware = async (req, res, next) => {
     console.log("try connect.");
 
     const mongoClient = await new MongoClient(
-      "mongodb://127.0.0.1:27017"
+      "mongodb://mongo:Dn5n3JdPjeTN33bakyAO@containers-us-west-53.railway.app:7154"
     ).connect();
 
     console.log("Connected to MongoDB");
