@@ -27,12 +27,15 @@ paths:
                 username:
                   type: string
                   minLength: 1
+                  default: 'maker1'
                 role:
-                  type: string 
-                  enum : [admin, maker, approver]
+                  type: string
+                  enum: [admin, maker, approver]
+                  default: maker
                 password:
                   type: string
                   pattern: ^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$
+                  default: 'Password123'
               required:
                 - username
                 - role
@@ -79,8 +82,11 @@ paths:
               properties:
                 username:
                   type: string
+                  default: 'maker1'
                 password:
                   type: string
+                  default: 'Password123'
+
       responses:
         '200':
           description: User successfully logged in
@@ -118,12 +124,17 @@ paths:
               properties:
                 amount:
                   type: number
+                  default: 1000
                 currency:
                   type: string
+                  default: 'USD'
                 sourceAccount:
                   type: string
+                  default: '1234567890'
                 destinationAccount:
                   type: string
+                  default: '0987654321'
+
       responses:
         '200':
           description: Transfer request created successfully
@@ -231,6 +242,7 @@ paths:
                 status:
                   type: string
                   enum: [rejected, approved]
+                  default: approved
       responses:
         '200':
           description: 'Transfer status updated successfully'
@@ -337,16 +349,19 @@ paths:
           in: query
           schema:
             type: string
+            default: '2023-08-25'
         - name: endDate
           in: query
           schema:
             type: string
+            default: '2023-08-25'
         - name: status
           in: query
           schema:
             type: array
             items:
               type: string
+            default: [approved, rejected]
       responses:
         '200':
           description: 'Transfer history successfully retrieved'
