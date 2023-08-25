@@ -242,7 +242,6 @@ paths:
                 status:
                   type: string
                   enum: [rejected, approved]
-                  default: approved
       responses:
         '200':
           description: 'Transfer status updated successfully'
@@ -361,7 +360,7 @@ paths:
             type: array
             items:
               type: string
-            default: [approved, rejected]
+            default: [approved, rejected, pending]
       responses:
         '200':
           description: 'Transfer history successfully retrieved'
