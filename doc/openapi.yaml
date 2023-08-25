@@ -6,6 +6,8 @@ info:
 servers:
   - url: http://localhost:3000
     description: Local server
+  - url : https://shy-pear-scarab-garb.cyclic.cloud
+    description: Cyclic server
 components:
   securitySchemes:
     bearerAuth:
