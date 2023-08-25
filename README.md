@@ -60,7 +60,7 @@ This will launch the server at `http://localhost:3000/`.
 
 ## API Documentation
 
-For a more detailed guide to using the API, navigate to `http://localhost:3000/api-docs`.
+For a more detailed guide to using the API, navigate to `https://shy-pear-scarab-garb.cyclic.cloud/api-docs/`.
 
 ## Testing
 
