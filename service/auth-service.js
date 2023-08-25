@@ -11,17 +11,6 @@ const register = async (req, res) => {
   //   return res.status(400).json({ error: "Invalid role" });
   // }
 
-  const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
-
-  if (!password.match(passwordRegex)) {
-    return res
-      .status(400)
-      .json({
-        error:
-          "Password must have at least one uppercase letter, one lowercase letter, one digit, and must be at least 8 characters long.",
-      });
-  }
-
   try {
     const user = await req.db.collection("users").findOne({ username });
 
