@@ -47,7 +47,7 @@ const login = async (req, res) => {
     if (isPasswordCorrect) {
       const token = jwt.sign(
         { username: user.username, id: user._id, role: user.role },
-        JWT_SIGN
+        'mysecret'
       );
 
       console.log(token);
