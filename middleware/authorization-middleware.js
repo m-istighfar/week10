@@ -12,7 +12,7 @@ const authorizationMiddleware = (allowedRoles) => {
     const token = authHeader.split(" ")[1];
 
     try {
-      const decodedToken = jwt.verify(token, JWT_SIGN);
+      const decodedToken = jwt.verify(token, 'mysecret';
       console.log("Decoded Token:", decodedToken);
 
       console.log("Allowed Roles:", allowedRoles);
